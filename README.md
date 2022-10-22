@@ -125,6 +125,8 @@ Service types:
 
 - https://www.terraform.io/downloads
 
+![terraform](static_images/terraform.drawio.png)
+
 ### 3.1 -  Features and resources
 
 **3.1.0 - Resource**
