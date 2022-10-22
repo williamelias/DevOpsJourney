@@ -8,22 +8,22 @@ All examples are store in the respective folder and documented in Makefile also.
 
 ## Part 1 - Docker and containerization
 
-### Prerequisites to install
+### 1.0 - Prerequisites to install
 
 - docker: https://docs.docker.com/engine/install/ubuntu/
 - make: https://www.gnu.org/software/make/
 
-### Docker Architecture
+### 1.1 - Docker Architecture
 
 ![dockerArch](img/docker_architecture.svg)
 
-### Docker layers
+### 1.2 - Docker layers
 
 ![aboutdocker](img/AboutDocker.drawio.png)
 
 ## Part 2 - Kubernets and container orchestration
 
-### Prerequisites to install
+### 2.0 - Prerequisites to install
 
 - k3d: https://k3d.io/v5.4.6/
     It is a tool to run kubernets cluster locally
@@ -31,7 +31,7 @@ All examples are store in the respective folder and documented in Makefile also.
 - kubect: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     It is a tool to interacts with kubernets cluster
 
-### k3d cluster
+### 2.1 -  k3d cluster
 
 To create a k3d cluster run: 
     k3d cluster create <cluster_name> (optional)
@@ -48,9 +48,9 @@ To list cluster:
 To delete cluster
     k3d cluster delete
 
-## kubernets resources
+### 2.2 - kubernets resources
 
-**Pod:**
+**2.2.0 - Pod:**
 
 It is a smallest resource in kubernets and into them is stored containers.
 
@@ -66,19 +66,19 @@ get pods with label filter:
 
     kubect get pods -l <label_tag>:<label_value>
 
-**ReplicaSet**
+**2.2.1 - ReplicaSet**
 
 This feature keeps desired number of pods equal to the number of running pods.
 But there is no automatic creation of pod with latest configuration, to see the last config applied, you must perform deletion and after a new creation of pod.
 
 ![replicase1](img/Kubernets-replicaset.png)
 
-**Deployment**
+**2.2.3 - Deployment**
 
 ![deployment](img/Kubernets-deploy.png)
 
 
-**Services**
+**2.2.4 - Services**
 
 Service types:
 
@@ -96,7 +96,8 @@ Service types:
 
 
 ![lb](img/Kubernets-services.drawio-lb.png)
-### kubect general commands
+
+### 2.3 -  kubect general commands
 
 - see default kube config file by path
     cat ~/.kube/config
@@ -120,10 +121,11 @@ Service types:
 
 ## Part 3 - Terrafor and infraestructure as code
 
-### Prerequisites to install
+### 3.0 - Prerequisites to install
 
+- https://www.terraform.io/downloads
 
-### Features and resources
+### 3.1 -  Features and resources
 
 **Resource**
 
