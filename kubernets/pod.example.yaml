@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meupod
+spec:
+  containers:
+    - name: site
+      image: williameliasalves/desafio_backend:latest
+      ports:
+        - containerPort: 8000
