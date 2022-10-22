@@ -17,7 +17,7 @@ All examples are store in the respective folder and documented in Makefile also.
 
 ![dockerArch](docker_architecture.svg)
 
-
+![aboutdocker](AboutDocker.drawio.png)
 ## Part 2 - Kubernets and container orchestration
 
 ### Prerequisites to install
