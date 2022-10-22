@@ -15,11 +15,11 @@ All examples are store in the respective folder and documented in Makefile also.
 
 ### Docker Architecture
 
-![dockerArch](docker_architecture.svg)
+![dockerArch](img/docker_architecture.svg)
 
 ### Docker layers
 
-![aboutdocker](AboutDocker.drawio.png)
+![aboutdocker](img/AboutDocker.drawio.png)
 
 ## Part 2 - Kubernets and container orchestration
 
@@ -56,7 +56,7 @@ It is a smallest resource in kubernets and into them is stored containers.
 
 - All containers in same pod share IP and file system.
 
-![pod](Kubernets-pods.drawio.png)
+![pod](img/Kubernets-pods.drawio.png)
 
 executing pods pointed to localhost:
 
@@ -71,31 +71,31 @@ get pods with label filter:
 This feature keeps desired number of pods equal to the number of running pods.
 But there is no automatic creation of pod with latest configuration, to see the last config applied, you must perform deletion and after a new creation of pod.
 
-![replicase1](Kubernets-replicaset.png)
+![replicase1](img/Kubernets-replicaset.png)
 
 **Deployment**
 
-![deployment](Kubernets-deploy.png)
+![deployment](img/Kubernets-deploy.png)
 
 
-**Service**
+**Services**
 
 Service types:
 
 - Internal communication:
     - ClusterIp
 
-![clusterapi](Kubernets-services-ag.drawio.png)
+![clusterapi](img/Kubernets-services-ag.drawio.png)
 
 - External communication:
 
     - NodePort
     - LoadBalancer
 
-![nodeport](Kubernets-services.drawio.png)
+![nodeport](img/Kubernets-services.drawio.png)
 
 
-![lb](Kubernets-services.drawio-lb.png)
+![lb](img/Kubernets-services.drawio-lb.png)
 ### kubect general commands
 
 - see default kube config file by path
@@ -117,6 +117,18 @@ Service types:
 
     kubect apply -f <filename>.yml
     kubect create -f <filename>.yml
+
+## Part 3 - Terrafor and infraestructure as code
+
+### Prerequisites to install
+
+
+### Features and resources
+
+**Resource**
+
+**Data Source**
+
 ## General Reference
 
 (Docker)
@@ -124,3 +136,6 @@ Service types:
 
 (Kubernets)
 - https://www.youtube.com/watch?v=4U2Ej_miGeM&t=4s
+
+(Terraform)
+- https://www.youtube.com/watch?v=2uXNNKLyP34&t=4s
