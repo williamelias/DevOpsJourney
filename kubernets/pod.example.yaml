@@ -7,4 +7,4 @@ spec:
     - name: site
       image: williameliasalves/desafio_backend:latest
       ports:
-        - containerPort: 8000
+        - containerPort: 8080

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meudeployment
+spec:
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api-web
+          resources:
+            limits:
+              memory: "108Mi"
+              cpu: "200m"
+          image: williameliasalves/desafio_backend:latest
+          ports:
+            - containerPort: 8080
+  replicas: 2

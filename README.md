@@ -58,6 +58,44 @@ It is a smallest resource in kubernets and into them is stored containers.
 
 ![pod](Kubernets-pods.drawio.png)
 
+executing pods pointed to localhost:
+
+    kubect port-forward pod/<pod_name> hostPort:podPort
+
+get pods with label filter:
+
+    kubect get pods -l <label_tag>:<label_value>
+
+**ReplicaSet**
+
+This feature keeps desired number of pods equal to the number of running pods.
+But there is no automatic creation of pod with latest configuration, to see the last config applied, you must perform deletion and after a new creation of pod.
+
+![replicase1](Kubernets-replicaset.png)
+
+**Deployment**
+
+![deployment](Kubernets-deploy.png)
+
+
+**Service**
+
+Service types:
+
+- Internal communication:
+    - ClusterIp
+
+![clusterapi](Kubernets-services-ag.drawio.png)
+
+- External communication:
+
+    - NodePort
+    - LoadBalancer
+
+![nodeport](Kubernets-services.drawio.png)
+
+
+![lb](Kubernets-services.drawio-lb.png)
 ### kubect general commands
 
 - see default kube config file by path
@@ -74,6 +112,11 @@ It is a smallest resource in kubernets and into them is stored containers.
     
 - describe resource:
     kubect describe <resource> <name>
+
+- apply or create resource by .yml
+
+    kubect apply -f <filename>.yml
+    kubect create -f <filename>.yml
 ## General Reference
 
 (Docker)
