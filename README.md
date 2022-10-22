@@ -125,15 +125,19 @@ Service types:
 
 - https://www.terraform.io/downloads
 
+### 3.1
+
+Terraform is a tool to apply infraestructure as code (IAC).
+
 ![terraform](static_images/terraform.drawio.png)
 
-### 3.1 -  Features and resources
+### 3.2 -  Features and resources
 
-**3.1.0 - Resource**
+**3.2.0 - Resource**
 
-**3.1.1 - Data Source**
+**3.2.1 - Data Source**
 
-**3.1.2 - Providers**
+**3.2.2 - Providers**
 
 ## General Reference
 
