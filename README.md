@@ -15,11 +15,11 @@ All examples are store in the respective folder and documented in Makefile also.
 
 ### 1.1 - Docker Architecture
 
-![dockerArch](img/docker_architecture.svg)
+![dockerArch](static_images/docker_architecture.svg)
 
 ### 1.2 - Docker layers
 
-![aboutdocker](img/AboutDocker.drawio.png)
+![aboutdocker](static_images/AboutDocker.drawio.png)
 
 ## Part 2 - Kubernets and container orchestration
 
@@ -56,7 +56,7 @@ It is a smallest resource in kubernets and into them is stored containers.
 
 - All containers in same pod share IP and file system.
 
-![pod](img/Kubernets-pods.drawio.png)
+![pod](static_images/Kubernets-pods.drawio.png)
 
 executing pods pointed to localhost:
 
@@ -71,11 +71,11 @@ get pods with label filter:
 This feature keeps desired number of pods equal to the number of running pods.
 But there is no automatic creation of pod with latest configuration, to see the last config applied, you must perform deletion and after a new creation of pod.
 
-![replicase1](img/Kubernets-replicaset.png)
+![replicase1](static_images/Kubernets-replicaset.png)
 
 **2.2.3 - Deployment**
 
-![deployment](img/Kubernets-deploy.png)
+![deployment](static_images/Kubernets-deploy.png)
 
 
 **2.2.4 - Services**
@@ -85,17 +85,17 @@ Service types:
 - Internal communication:
     - ClusterIp
 
-![clusterapi](img/Kubernets-services-ag.drawio.png)
+![clusterapi](static_images/Kubernets-services-ag.drawio.png)
 
 - External communication:
 
     - NodePort
     - LoadBalancer
 
-![nodeport](img/Kubernets-services.drawio.png)
+![nodeport](static_images/Kubernets-services.drawio.png)
 
 
-![lb](img/Kubernets-services.drawio-lb.png)
+![lb](static_images/Kubernets-services.drawio-lb.png)
 
 ### 2.3 -  kubect general commands
 
@@ -127,9 +127,11 @@ Service types:
 
 ### 3.1 -  Features and resources
 
-**Resource**
+**3.1.0 - Resource**
 
-**Data Source**
+**3.1.1 - Data Source**
+
+**3.1.2 - Providers**
 
 ## General Reference
 
