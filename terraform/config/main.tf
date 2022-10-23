@@ -22,7 +22,7 @@ resource "digitalocean_droplet" "jenkins" {
   image    = "ubuntu-22-04-x64"
   name     = "jenkins"
   region   = var.region
-  size     = "s-2vcpu-2gb"
+  size     = "s-2vcpu-4gb"
   ssh_keys = [data.digitalocean_ssh_key.default.id]
 }
 

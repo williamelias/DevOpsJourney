@@ -168,6 +168,29 @@ As well as in programing, we can reference variables with this feature.
 
 After running the terraform configuration flow, we can save, through the present resource, the outputs of some other resource.
 
+## Part 4 - Jenkins and CI/CD
+
+### 4.0 - Prerequisites
+
+### 4.1 - Continous integration (CI)
+
+Continous integration is a flow that contains these steps:
+
+- codification
+- commit
+- building
+- test
+- packaging
+
+
+### 4.2 - Continous Deploy
+
+Continous deploy is a flow that contains these steps:
+
+- release 
+- acceptance tests
+- deploy 
+
 ## General Reference
 
 **(Docker)**

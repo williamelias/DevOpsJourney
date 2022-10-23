@@ -1,0 +1,37 @@
+pipeline {
+    agent any //quem vai executar a pipeline
+    
+    stages {  //estágios de execução da pipeline
+        stage("Build docker image."){
+            steps {
+                // Construção da imagem via docker
+                script{
+                    dockerapp = docker.build("williameliasalves/kubenews:${env.BUILD_ID}","-f ./src/Dockerfile ./src")
+                }
+            }
+        }
+
+        stage("Push docker image."){
+            steps{
+                script{
+                    docker.withRegistry("https://registry.hub.docker.com","dockerhub"){
+                        dockerapp.push("latest")
+                        dockerapp.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }
+
+        stage("Deploy kubernets."){
+            enviroment {
+                tag_version = "${env.BUIL_ID}"
+            }
+            steps{
+                withKubeConfig ([credentialsId: 'kubeconfig']){
+                    sh 'sed -i "s/{{TAG}}/$tag_version/g" .k8s/deployment.yml'
+                    sh 'kubectl apply -f ./k8s/deployment.yml'
+                }
+            }
+        }
+    }
+}
