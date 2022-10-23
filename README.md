@@ -121,9 +121,12 @@ Service types:
 
 ## Part 3 - Terrafor and infraestructure as code
 
-### 3.0 - Prerequisites to install
+### 3.0 - Prerequisites
 
-- https://www.terraform.io/downloads
+- Install terraform tool:
+    https://www.terraform.io/downloads
+
+
 
 ### 3.1
 
@@ -131,21 +134,56 @@ Terraform is a tool to apply infraestructure as code (IAC).
 
 ![terraform](static_images/terraform.drawio.png)
 
+
+In this case, the used provider is Digital Ocean and you need that run this steps bellow:
+
+- To execute terraform setup files
+    - Create Digital Ocean Account:  
+        https://www.digitalocean.com/
+    
+    - Generate  ssh key to connect into droplet by ssh key pair
+        ssh-keygen -t rsa -b 2048 
+
 ### 3.2 -  Features and resources
 
 **3.2.0 - Resource**
 
+Refere-se a um recurso a ser criado ou atualizado no momento do apply
+
 **3.2.1 - Data Source**
+
+It refers to previously created resource inside provider.
 
 **3.2.2 - Providers**
 
+It Refers to cloud service as AWS, GCP, Digital Ocean, Azure and anothers.
+
+**3.2.3 Terraform settings**
+
+**3.2.4 Variables**
+
+As well as in programing, we can reference variables with this feature.
+
+**3.2.5 Outputs**
+
+After running the terraform configuration flow, we can save, through the present resource, the outputs of some other resource.
+
 ## General Reference
 
-(Docker)
+**(Docker)**
+
 - https://www.youtube.com/watch?v=UlbeZ97TWyY&t=197s
 
-(Kubernets)
+- https://docs.docker.com/desktop/
+
+**(Kubernets)**
+
 - https://www.youtube.com/watch?v=4U2Ej_miGeM&t=4s
 
-(Terraform)
+- https://kubernetes.io/docs/reference/
+
+**(Terraform)**
+
 - https://www.youtube.com/watch?v=2uXNNKLyP34&t=4s
+
+- https://registry.terraform.io/browse/providers
