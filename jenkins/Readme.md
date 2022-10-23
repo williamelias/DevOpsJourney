@@ -1,7 +1,10 @@
 
 ### Prerequisites
 
-- install jenkins :
+- jenkins : 
+
+    install java jdk: sudo apt install openjdk-17-jdk -y 
+    install jenkins: https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 
 - install docker: curl -fsSL https://get.docker.com | sh
 

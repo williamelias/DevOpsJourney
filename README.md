@@ -191,6 +191,112 @@ Continous deploy is a flow that contains these steps:
 - acceptance tests
 - deploy 
 
+## Part 5 - Observability with Grafana and Prometheus
+
+
+### 5.0 - Prerequisites
+
+### 5.1 - Metrics
+
+Métricas são medições numéricas relativas a dados de um software, sendo disponibilizadas em uma linha temporal.
+
+**5.1.0 - Types os metrics**
+
+System Metrics
+
+- Request amount
+- Quantity of Errors
+- Resource consumption
+- Resource timing access
+
+Businnes Metrics
+
+- User type of application access
+- Product by
+
+**5.1.1 - Metrics are not Logs**
+
+Metrics are different from logs, as they have data organized and exposed through some interface, which can be numerical data, graphs or aggregations of values.
+
+Logs are textual data, error messages.
+
+### 5.2 - Prometheus
+
+Documentation: https://prometheus.io
+
+It is an open source tool for managing and monitoring software metrics. It has several ways to visualize data.
+
+Prometheus is a standalone tool and has been graduated by the CNFC (Cloud Native Computing Foundation), so it doesn't need additional software to run.
+
+**5.2.0 - Prometheus Server**
+
+The Prometheus server is responsible for managing and maintaining three parts, and they are:
+
+- Retrieval : Responsible for the management and execution of jobs
+
+- Storage: Responsible for storing data in TSDB format.
+
+- PromQL: Responsible for searches within the data.
+
+![pserver](static_images/prometheus_server.png)
+
+
+**5.2.0 - Time series database (TSDB)**
+
+There are, in general, two ways of storing data:
+
+- Pure: Prometheus itself stores data in sets every two hours.
+
+![puretsbd](static_images/tsdb_noadp.png)
+
+
+- With an Adapter: An external service is used to perform this storage.
+
+![adaptertsdb](static_images/tsdb_adp.png)
+
+**5.2.1 - Retrieval and jobs**
+
+This resource is responsible for performing data collection.
+
+Data collection is done through endpoints that are exposed in the application, prometheus accesses this endpoint and thus manages to obtain the data.
+
+Prometheus supports multiple programming languages ​​(Python, Java and others) and tools (Docker, Kubernets, Grafana and others).
+
+But, when it does not have integration with such software or platform, we can use Exporters.
+
+**Exporter**
+
+It is a tool that runs inside the application server and collects the metrics for availability via api.
+
+![exporter](static_images/exporter.png)
+
+
+**Push Gateway**
+
+It is a tool that makes data available for short-lived processes, such as tasks and workers.
+
+![exporter](static_images/push_gat.png)
+
+
+**Service Discorvery**
+
+
+**5.2.2 - PromQL**
+
+After collecting data, it is necessary to expose them in some way, the means that Prometheus can do this are:
+
+- Web Ui : It's a built-in endpoint (usually used for quick access or testing).
+
+- Grafana
+
+- API: The query can be done via api.
+
+**5.2.3 - Alert Manager**
+
+Going in parallel with the parts mentioned above, we have the Prometheus alerts mechanism that can be addressed to different stacks, such as: Slack, Telegram, Discord and others.
+
+![alert](static_images/alert.png)
+
 ## General Reference
 
 **(Docker)**
@@ -210,3 +316,9 @@ Continous deploy is a flow that contains these steps:
 - https://www.youtube.com/watch?v=2uXNNKLyP34&t=4s
 
 - https://registry.terraform.io/browse/providers
+
+**(Jenkins)**
+
+- https://www.youtube.com/watch?v=vi-CwU4Qgq8
+
+- https://www.jenkins.io
